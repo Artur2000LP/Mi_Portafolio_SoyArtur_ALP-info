@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pagina web Artur</title>
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/aminStyle.css">
+	<link rel="icon" type="image/x-icon" href="data:image/x-icon;,">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+
+	<!-- Agrega el elemento de audio con el atributo autoplay -->
+	<audio id="miAudio" autoplay>
+		<source src="./ms/AudioArtur.mp3" type="audio/mp3">
+		Tu navegador no soporta el elemento de audio.
+	</audio>
+
+	
+	<!-- barra lateral o menu  -->
+	<div>
+		<div class="menu">
+			<ion-icon name="menu-outline"></ion-icon>
+			<ion-icon class="cerrar" name="close-outline"></ion-icon>
+		</div>
+		<div class="barra-lateral ">
+			<div>
+				<div class="nombre-pagina">
+					<img src="./img/IconoArtur.png" alt="Artur" id="cloud">
+					<span>Soy Artur</span>
+				</div>
+				<a href="https://www.unamba.edu.pe/" target="_blank" style="text-decoration:none;">
+					<div class="boton">
+						<span>Universidad</span>
+						<ion-icon name="school-outline"></ion-icon>
+					</div>
+				</a>
+
+			</div>
+			<nav class="navegacion">
+				<ul>
+					<li>
+						<a id="Inicio" href="#inicioCont" onclick="seleccionarOpcion('Inicio')">
+							<ion-icon name="home-outline"></ion-icon>
+							<span>Inicio</span>
+						</a>
+
+					</li>
+					<li>
+						<a id="Sobre_Mi" href="#sobre_mi" onclick="seleccionarOpcion('Sobre_Mi')">
+							<ion-icon name="person-outline"></ion-icon>
+							<span>Sobre Mí</span>
+						</a>
+
+					</li>
+					<li>
+						<a id="Habilidades" href="#habilidades" onclick="seleccionarOpcion('Habilidades')">
+							<ion-icon name="paper-plane-outline"></ion-icon>
+							<span>Habilidades Técnicas</span>
+						</a>
+
+					</li>
+					<li>
+						<a id="Proyectos" href="#proyectos" onclick="seleccionarOpcion('Proyectos')">
+							<ion-icon name="folder-open-outline"></ion-icon>
+							<span>Proyectos Desarrollados</span>
+						</a>
+
+					</li>
+					<li>
+						<a id="Certificaciones" href="#certificaciones" onclick="seleccionarOpcion('Certificaciones')">
+							<ion-icon name="bookmark-outline"></ion-icon>
+							<span>Certificaciones</span>
+						</a>
+
+					</li>
+					<li>
+						<a id="Contacto" href="#contacto" onclick="seleccionarOpcion('Contacto')">
+							<ion-icon name="call-outline"></ion-icon>
+							<span>Contácto</span>
+						</a>
+
+					</li>
+				</ul>
+			</nav>
+
+			<div>
+				<div class="linea"></div>
+
+				<div class="modo-oscuro">
+					<div class="info">
+						<ion-icon name="moon-outline"></ion-icon>
+						<span>Tema</span>
+					</div>
+					<div class="switch">
+						<div class="base">
+							<div class="circulo">
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="usuario">
+					<img src="./img/Artur.png" alt="Artur">
+					<div class="info-usuario">
+						<div class="nombre-email">
+							<span class="nombre">Artur</span>
+							<span class="email">soyartur@gmail.com</span>
+						</div>
+						<ion-icon name="ellipsis-vertical-outline"></ion-icon>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- pagrina  -->
+	<main class="paguina">
+		<article id="inicioCont" class="contenedor_inicio">
+
+			<div class="inicioCont_Text">
+				<h1 class="h1_txt">¡Bienvenido a mi Portafolio!</h1>
+				<p class="p_text">Hola, mi nombre es Artur soy un desarrollador Front-End. Me
+					apasiona el diseño web y la creación de sitios web funcionales.
+					Estoy aquí para compartir mis conocimientos y mostrarles algunos
+					de los proyectos en los que he trabajado.
+				</p>
+			</div>
+			<div class="imgen">
+				<img src="./img/imagenRobot.png" alt="Robot">
+			</div>
+
+		</article>
+		<section id="sobre_mi" class="sobre_mi_container">
+			<h1 class="sobre_mi_titulo">
+				Sobre Mí
+			</h1>
+			<p class="sobre_mi_parrafo" id="sobremiParrafo" >
+				Me encanta crear experiencias en línea únicas y atractivas,
+				Mi objetivo es combinar diseño visual
+				impactante y funcionalidad sólida para ofrecer resultados excelentes.
+			</p>
+			<div class="sobre_mi_info">
+				<div class="tarjeta" onmouseover="voltearTarjeta(this)" onmouseout="voltearTarjeta(this)">
+					<div class="cara cara-frontal">
+						<img src="./img/PasiónDesarrollo.png" alt="Imagen">
+					</div>
+					<div class="cara cara-trasera">
+						<h2>Pasión por el desarrollo web </h2>
+						<p>Disfruto cada aspecto del
+							diseño y desarrollo web. Me
+							apasiona crear aplicaciones
+							web innovadoras y
+							orientadas al usuario.</p>
+					</div>
+				</div>
+
+				<div class="tarjeta" onmouseover="voltearTarjeta(this)" onmouseout="voltearTarjeta(this)">
+					<div class="cara cara-frontal">
+						<img src="./img/Enfoquecalidad.png" alt="Imagen">
+					</div>
+					<div class="cara cara-trasera">
+						<h2>Enfoque en la calidad </h2>
+						<p>Siempre me esfuerzo por
+							lograr la excelencia en cada
+							proyecto. Me aseguro de
+							que mi código sea limpio,
+							eficiente y cumpla con los
+							estándares más altos.
+						</p>
+					</div>
+				</div>
+				<div class="tarjeta" onmouseover="voltearTarjeta(this)" onmouseout="voltearTarjeta(this)">
+					<div class="cara cara-frontal">
+						<img src="./img/CapacidadColaboración.png" alt="Imagen">
+					</div>
+					<div class="cara cara-trasera">
+						<h2>Capacidad de colaboración </h2>
+						<p>
+							Me encanta trabajar en
+							equipo y estoy
+							acostumbrado a colaborar
+							con diseñadores,
+							desarrolladores y otros
+							profesionales para lograr
+							resultados sobresalientes.
+
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="habilidades" class="habilidades_container">
+			<div class="habilidades_txt">
+				<h1>
+					Habilidades Técnicas
+				</h1>
+				<p>Me emociona poder desarrollar aplicaciones web de alta calidad. Algunas de las habilidades
+					principales en las que me destaco incluyen</p>
+			</div>
+			<div class="carrusel">
+				<div class="swiper mySwiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide swiper-slide_tarjeta">
+							<div class="swiper-slide-txt">
+								<h2>HTML</h2>
+								<p>Creación de
+									estructuras web
+									semánticas y
+									accesibles
+									utilizando los
+									últimos estándares
+									de HTML5.
+								</p>
+							</div>
+							<div class="contenido">
+								<img src="./img/HTML_img.png" alt="Imagen">
+							</div>
+						</div>
+						<div class="swiper-slide swiper-slide_tarjeta">
+							<div class="swiper-slide-txt ">
+								<h2>CSS</h2>
+								<p>Diseño y estilización
+									de sitios web
+									utilizando CSS3 y
+									preprocesadores
+									como Sass y Less.
+								</p>
+							</div>
+							<div class="contenido">
+								<img src="./img/CSS_img.png" alt="Imagen">
+							</div>
+						</div>
+						<div class="swiper-slide swiper-slide_tarjeta">
+							<div class="swiper-slide-txt ">
+								<h2>JavaScript</h2>
+								<p>Desarrollo de
+									funcionalidades
+									interactivas y
+									dinámicas utilizando
+									JavaScript y
+									frameworks como
+									React y Vue.js.
+								</p>
+							</div>
+							<div class="contenido">
+								<img src="./img/JS_img.png" alt="Imagen">
+							</div>
+						</div>
+						<div class="swiper-slide swiper-slide_tarjeta">
+							<div class="swiper-slide-txt ">
+								<h2>Responsive Design</h2>
+								<p>Creación de sitios
+									web que se
+									adaptan y se ven
+									bien en diferentes
+									dispositivos y
+									tamaños de
+									pantalla.
+								</p>
+							</div>
+							<div class="contenido">
+								<img src="./img/responsive_img.png" alt="Imagen">
+							</div>
+						</div>
+						<div class="swiper-slide swiper-slide_tarjeta">
+							<div class="swiper-slide-txt ">
+								<h2>GitHub</h2>
+								<p> integración y colaboración en plataformas como GitHub para facilitar el trabajo en
+									equipo y el seguimiento de cambios en el código.
+								</p>
+							</div>
+							<div class="contenido">
+								<img src="./img/github_img.png" alt="Imagen">
+							</div>
+						</div>
+						<div class="swiper-slide swiper-slide_tarjeta">
+							<div class="swiper-slide-txt ">
+								<h2>Angular Js</h2>
+								<p>Desarrollo de aplicaciones web, un
+									framework de JavaScript que facilita la creación de interfaces de usuario dinámicas
+									y escalables.
+								</p>
+							</div>
+							<div class="contenido">
+								<img src="./img/Angular.png" alt="Imagen">
+							</div>
+						</div>
+						<div class="swiper-slide swiper-slide_tarjeta">
+							<div class="swiper-slide-txt ">
+								<h2>Node Js </h2>
+								<p>Implementación de servidores del lado del servidor, construir aplicaciones web
+									eficientes y escalables.
+								</p>
+							</div>
+							<div class="contenido">
+								<img src="./img/nodeJs_img.png" alt="Imagen">
+							</div>
+						</div>
+					</div>
+					<!-- <div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div> -->
+					<div class="swiper-pagination"></div>
+					<div class="autoplay-progress">
+						<svg viewBox="0 0 50 50">
+							<circle cx="24" cy="24" r="20"></circle>
+						</svg>
+						<span></span>
+
+					</div>
+				</div>
+			</div>
+
+
+		</section>
+		<section id="proyectos" class="proyectos_container">
+			<h1>Proyectos Desarrollados</h1>
+			<div class="proyectos_div">
+				<div class="proyecto_div">
+					<a class="proyecto_img" href="https://artur2000lp.github.io/NavidadPaguinaParaDesearAmistades/"
+						target="_blank">
+						<img src="./img/navidad.png" alt="">
+					</a>
+					<span>Sorpresa Navideña Dinamico</span>
+				</div>
+				<div class="proyecto_div">
+					<a class="proyecto_img" href="https://artur2000lp.github.io/PortafolioArtur_LP/" target="_blank">
+						<img src="./img/primerPorfolioArtur.png" alt="">
+					</a>
+					<span>Portafolio Artur </span>
+				</div>
+				<div class="proyecto_div">
+					<a class="proyecto_img" href="https://artur2000lp.github.io/MySeeker/" target="_blank">
+						<img id="imgButtom" src="./img/Buscador.png" alt="Buscador">
+					</a>
+					<span>Busqueda con Google Basico </span>
+				</div>
+				<div class="proyecto_div">
+					<a class="proyecto_img" href="https://artur2000lp.github.io/Customizable_page/" target="_blank">
+						<img src="./img/sistemaParaCursos.png" alt="">
+					</a>
+					<span>Sistema para Venta de Cursos </span>
+				</div>
+				<div class="proyecto_div">
+					<a class="proyecto_img" href="https://artur2000lp.github.io/Galeria/" target="_blank">
+						<img src="./img/Galeria.png" alt="">
+					</a>
+					<span>Galeria de Imagen, Basico</span>
+				</div>
+				<div class="proyecto_div">
+					<a class="proyecto_img" href="https://artur2000lp.github.io/tienda_de_Ropa/" target="_blank">
+						<img src="./img/TiendaDeRopa.png" alt="">
+					</a>
+					<span>Sistema de Tienda de Ropa</span>
+				</div>
+				<div class="proyecto_div">
+					<a class="proyecto_img" href=" https://artur2000lp.github.io/Alquiler_vehiculo/" target="_blank">
+						<img src="./img/alquiler_Vehiculo.png" alt="">
+					</a>
+					<span>Sistema de Alquiler de vehiculo</span>
+				</div>
+				<div class="proyecto_div">
+					<a class="proyecto_img" href="https://artur2000lp.github.io/CarrucelGaleria_Productos/" target="_blank">
+						<img src="./img/galeriaProductos.png" alt="">
+					</a>
+					<span>Galeria de Licores </span>
+				</div>
+
+			</div>
+		</section>
+		<section id="certificaciones" class="certificaciones_container">
+			<h1>Certificaciones</h1>
+			<p>Creo firmemente en la educación continua y el aprendizaje constante, Aquí hay una lista de mis
+				certificaciones relevantes.</p>
+			<div class="mostrar_certificaciones">
+				<div class="swiper mySwiper_Galeria">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img src="certificaciones_img/certificacion_bolibia1.png" />
+						</div>
+						<div class="swiper-slide">
+							<img src="certificaciones_img/certificacion_bolibia2.png" />
+						</div>
+						<div class="swiper-slide">
+							<img src="certificaciones_img/certificacion_bolibia3.png" />
+						</div>
+						<div class="swiper-slide">
+							<img src="certificaciones_img/OI_img.jpeg" />
+						</div>
+						<div class="swiper-slide">
+							<!-- para completar  -->
+							<img src="certificaciones_img/certificacion_bolibia1.png" />
+						</div>
+						<div class="swiper-slide">
+							<img src="certificaciones_img/certificacion_bolibia3.png" alt="ia" />
+						</div>
+						<div class="swiper-slide">
+							<img src="certificaciones_img/certificacion_bolibia2.png" />
+						</div>
+						<div class="swiper-slide">
+							<img src="certificaciones_img/OI_img.jpeg" />
+						</div>
+						<div class="swiper-slide">
+							<img src="certificaciones_img/certificacion_bolibia2.png" />
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+		<section id="contacto" class="contacto_container">
+			<form action="https://formspree.io/xzbnpyqb" method="POST" class="formulario"
+				onsubmit="return validarFormulario()" target="formspree_iframe">
+				<h1>Contactame</h1>
+
+				<label for="nombre">Nombre:</label>
+				<input type="text" id="nombre" name="nombre">
+
+				<label for="correo">Correo:</label>
+				<input type="email" id="correo" name="correo">
+
+				<label for="mensaje">Mensaje:</label>
+				<textarea id="mensaje" name="mensaje"></textarea>
+
+				<button type="submit">Enviar</button>
+			</form>
+			<iframe name="formspree_iframe" style="display:none;"></iframe>
+			<div class="confimacion_contacto">
+				<p id="confirmacion" style="display: none;">Mensaje enviado correctamente. ¡Gracias!</p>
+				<p id="camposVacios" style="display: none;">Por favor, complete todos los campos...</p>
+			</div>
+		</section>
+		<!-- footer -->
+		<footer class="footer paguina">
+			<div class="footer__contact">
+				<a href="https://www.facebook.com/ruhiartur.ltnaprras?mibextid=ZbWKwL" class="footer__link"
+					target="_blank">
+					<ion-icon name="logo-facebook"></ion-icon>
+				</a>
+				<a href="https://github.com/Artur2000LP" class="footer__link" target="_blank">
+					<ion-icon name="logo-github"></ion-icon>
+				</a>
+
+			</div>
+		</footer>
+	</main>
+
+
+
+	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<script src="./js/script.js"></script>
+</body>
+
+</html>
